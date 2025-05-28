@@ -1,0 +1,41 @@
+.logo {
+  position: fixed;
+  top: 20px; /* Keep this value as is */
+  left: 145px !important;
+  left: 150px; /* Adjust this value to move closer to the desired text */
+  z-index: 1000;
+  display: flex;
+  align-items: center; /* Ensure the logo is vertically centered */
+  justify-content: center;
+  transition: top 0.3s ease, left 0.3s ease; /* Smooth transitions for positioning */
+}
+
+.logo-image {
+  width: 55px; /* Default size for desktop */
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+/* Adjust for mobile responsiveness */
+@media (max-width: 768px) {
+  .logo {
+    top: 10px; /* Keep this value as is */
+    left: 10px; /* Adjust left position for mobile screens */
+  }
+
+  .logo-image {
+    width: 40px; /* Smaller logo for mobile screens */
+  }
+}
+
+/* Add margin-top for specific desktop adjustments */
+@media (min-width: 769px) {
+  .logo {
+    top: 20px; /* Keep this value as is */
+    left: 150px; /* Ensure this value is where you want the logo on larger screens */
+  }
+
+  .logo-image {
+    width: 60px; /* Slightly larger on larger screens */
+  }
+}

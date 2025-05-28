@@ -1,0 +1,20 @@
+:root {
+  --particle-color: #ffffff; /* Default particle color for light theme */
+}
+
+.animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.animated-background.light {
+  --particle-color: #ffffff; /* White particles for light theme */
+}
+
+.animated-background.dark {
+  --particle-color: #000000; /* Dark particles for dark theme */
+}

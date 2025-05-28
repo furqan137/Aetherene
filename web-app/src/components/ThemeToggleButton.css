@@ -1,0 +1,63 @@
+.theme-toggle-button {
+  background-color: transparent;
+  border: 2px solid currentColor; /* Adds a border around the button */
+  border-radius: 50%; /* Makes the button circular */
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+  transition: transform 0.3s ease, top 0.3s ease, right 0.3s ease, background-color 0.3s ease;
+  position: fixed;
+  top: 20px;  /* Ensure proper positioning for desktop */
+  right: 120px !important;
+  z-index: 10;
+} 
+
+.theme-toggle-button:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  background-color: rgba(255, 255, 255, 0.3); /* Light background on hover */
+}
+
+.theme-icon {
+  width: 28px; /* Default size for desktop */
+  height: 28px;
+  transition: filter 0.3s ease;
+}
+
+/* Light mode button background (when dark mode is on) */
+body.dark .theme-toggle-button {
+  background-color: white; /* White background in dark mode */
+  color: black; /* Black border for contrast */
+}
+
+body.light .theme-toggle-button {
+  background-color: transparent; /* Transparent in light mode */
+  color: inherit;
+}
+
+/* Adjust for mobile responsiveness */
+@media (max-width: 768px) {
+  .theme-toggle-button {
+    top: 10px; /* Reduce top padding for mobile */
+    right: 10px; /* Adjust right padding for mobile */
+    padding: 8px;
+  }
+
+  .theme-icon {
+    width: 20px; /* Smaller icon for mobile */
+    height: 20px;
+  }
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 769px) {
+  .theme-toggle-button {
+    top: 20px;
+    right: 20px;
+    padding: 12px;
+  }
+
+  .theme-icon {
+    width: 28px; /* Ensure the icon is slightly larger on desktop */
+    height: 28px;
+  }
+}

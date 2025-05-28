@@ -1,0 +1,68 @@
+.typewriter-text {
+  font-family: 'Courier New', Courier, monospace;
+  color: #ff32e0; /* Text color for light mode */
+  font-size: 4rem; /* Base font size */
+  display: inline-block; /* Ensures the cursor behaves correctly */
+  border-right: 2px solid #ff32e0; /* Cursor color */
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: -140px; /* Initial left margin */
+  animation: blink 0.7s step-end infinite;
+  transition: color 0.5s ease; /* Smooth transition for color changes */
+  position: relative; /* Allows for movement via top property */
+  top: -30px; /* Moves the text up by 30px, adjust as needed */
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Light mode styles */
+body.light .typewriter-text {
+  color: rgba(0, 0, 0, 0.7); /* Initial transparent black for light mode */
+}
+
+body.light .typewriter-text:after {
+  content: 'AETHERENE'; /* Full text */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgb(0, 0, 0); /* Final color to fill the holes */
+  opacity: 100; /* Start transparent */
+  transition: opacity 0.5s ease; /* Smooth transition for visibility */
+}
+
+/* Dark mode styles */
+body.dark .typewriter-text {
+  color: rgb(255, 255, 255); /* Initial transparent white for dark mode */
+}
+
+body.dark .typewriter-text:after {
+  content: 'AETHERENE'; /* Full text */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: white; /* Final color to fill the holes */
+  opacity: 0; /* Start transparent */
+  transition: opacity 0.5s ease; /* Smooth transition for visibility */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .typewriter-text {
+    font-size: 2.5rem; /* Adjusted font size for mobile */
+    margin-left: 65px; /* Adjusted margin for mobile */
+    top: 15px; /* Adjusted position for mobile */
+  }
+}

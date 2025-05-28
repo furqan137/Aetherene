@@ -1,0 +1,119 @@
+/* Add this at the beginning of your CSS file to import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+.centered-content {
+  position: relative;
+  text-align: left; /* Align text to the left */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Align all content to the left */
+  height: 100vh;
+  padding: 2rem;
+  z-index: 1;
+  margin-left: 100px; /* Shift content slightly to the left */
+  margin-top: -90px;  /* Shift content slightly upwards */
+}
+
+.static-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Ensure static container is left aligned */
+}
+
+/* Fix the typewriter container height */
+.typewriter-container {
+  position: relative; /* Changed from absolute to relative for better centering */
+  font-size: 1.5rem;
+  margin-bottom: 20px; /* Adds spacing from heading */
+  height: 50px; /* Fixed height to avoid shifting */
+}
+
+/* Ensure static heading styles */
+.static-heading {
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-size: 2.5rem;
+  color: #333; /* Default color for light theme */
+  margin-bottom: 30px; /* Adds spacing between heading and button */
+  margin-left: -120px; /* Adjust for mobile alignment */
+}
+
+body.dark .static-heading {
+  color: rgba(255, 255, 255, 0.916); /* White text for dark theme */
+}
+
+.explore-button {
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  background-color: rgb(0, 0, 0); /* Magenta for light theme */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 50px;
+  border-radius: 13px;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+body.dark .explore-button {
+  background-color: #97a1a7; /* Sky light for dark theme */
+  color: black; /* Black text for contrast */
+}
+
+.explore-button:hover {
+  background-color: #d5006d; /* Darker magenta on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+body.dark .explore-button:hover {
+  background-color: #00bfff; /* Lighter sky color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .centered-content {
+    height: auto; /* Allow content to adjust based on size */
+    padding: 1rem; /* Reduced padding for mobile */
+    margin-left: 0; /* Reset left margin for mobile */
+    margin-top: 0; /* Reset top margin for mobile */
+  }
+
+  .static-heading {
+    font-size: 2rem; /* Smaller font size for mobile */
+    margin-bottom: 20px; /* Reduced space below heading */
+    margin-left: 0; /* Center content for mobile */
+  }
+
+  .explore-button {
+    font-size: 1rem; /* Smaller font size for button */
+    padding: 8px 16px; /* Adjust padding for mobile */
+    border-radius: 13px;
+  }
+
+  .typewriter-container {
+    font-size: 1.5rem; /* Smaller font size for typewriter effect */
+    margin-bottom: 15px; /* Reduced space below typewriter */
+    height: 30px; /* Adjust fixed height for mobile */
+  }
+}
+
+/* Additional styles for smaller mobile devices */
+@media (max-width: 480px) {
+  .static-heading {
+    font-size: 1.5rem; /* Further decrease heading size for smaller screens */
+    margin-left: 20px; /* Adjusted margin for mobile */
+    margin-top: 40px;
+  }
+
+  .explore-button {
+    font-size: 0.9rem; /* Further decrease button size */
+    padding: 6px 12px; /* Adjust padding for smaller buttons */
+    margin-left: 65px; /* Adjusted margin for mobile */
+    margin-top: -5px;
+  }
+
+  .typewriter-container {
+    font-size: 1.3rem; /* Decrease typewriter font size */
+  }
+}

@@ -1,0 +1,21 @@
+.footer {
+    background-color: #333; /* Dark background for contrast */
+    color: #fff;            /* White text color */
+    text-align: center;     /* Center the text */
+    padding: 1rem 0;        /* Padding for spacing */
+    position: relative;      /* Relative positioning */
+    bottom: 0;              /* Stick to the bottom */
+    width: 100%;            /* Full width */
+    z-index: 10;           /* Higher z-index if needed */
+  }
+  
+  .footer a {
+    color: #fff;            /* White color for links */
+    text-decoration: none;  /* No underline */
+    margin: 0 10px;        /* Space between links */
+  }
+  
+  .footer a:hover {
+    text-decoration: underline; /* Underline on hover for links */
+  }
+  

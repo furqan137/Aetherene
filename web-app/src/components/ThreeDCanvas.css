@@ -1,0 +1,23 @@
+.three-d-canvas {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 65vw;
+  height: 65vh;
+  z-index: -2;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .three-d-canvas {
+    width: 80vw;
+    height: 50vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .three-d-canvas {
+    width: 100vw;
+    height: 40vh;
+  }
+}
